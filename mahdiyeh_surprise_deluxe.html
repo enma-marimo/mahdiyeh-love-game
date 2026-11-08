@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#160b24">
+<title>برای مهدیه 💗</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
+:root{--pink:#ff72b6;--pale:#ffd4e8;--ink:#180d27;--cream:#fff4fa}
+*{box-sizing:border-box}
+body{margin:0;min-height:100svh;font-family:Vazirmatn,Tahoma,sans-serif;color:var(--cream);background:radial-gradient(ellipse at 50% 10%,#542657 0%,#281437 44%,#10091b 100%);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.14;background:linear-gradient(90deg,transparent 95%,#ff9bc8 96%),linear-gradient(transparent 95%,#ff9bc8 96%);background-size:24px 24px}
+#pixelRain{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.pixel{position:absolute;top:-35px;color:#ff8fc2;text-shadow:0 0 12px #ff64ad;animation:drop linear forwards;image-rendering:pixelated}
+@keyframes drop{to{transform:translateY(110svh) rotate(180deg);opacity:0}}
+main{position:relative;z-index:1;min-height:100svh;display:flex;align-items:center;justify-content:center;padding:24px 15px calc(24px + env(safe-area-inset-bottom))}
+.screen{display:none;width:min(100%,450px);text-align:center;animation:enter .45s ease both}
+.screen.active{display:block}
+@keyframes enter{from{opacity:0;transform:translateY(13px) scale(.985)}to{opacity:1;transform:none}}
+.panel{position:relative;background:linear-gradient(145deg,#ffffff19,#ffffff08);border:2px solid #ffb3d344;border-radius:8px;padding:26px 19px;box-shadow:0 12px 0 #0c0614,0 22px 55px #09030d88,inset 0 0 0 4px #ffffff08;backdrop-filter:blur(9px)}
+.panel:before{content:"";position:absolute;inset:7px;border:1px dashed #ffb3d333;pointer-events:none}
+.eyebrow{font-size:12px;letter-spacing:1px;color:#ffc0dc;margin:0 0 14px}
+h1{font-size:clamp(26px,7vw,34px);line-height:1.65;margin:0 0 8px;font-weight:800;text-shadow:2px 3px 0 #70234e}
+p{line-height:2;margin:8px 0 18px;color:#f7dce9}
+.heart-wrap{height:175px;display:grid;place-items:center;margin:0}
+.big-heart{font-size:110px;line-height:1;border:0;background:none;color:#ff77b5;filter:drop-shadow(0 0 12px #ff5ba4);animation:pulse 1.2s infinite;cursor:pointer;touch-action:manipulation}
+@keyframes pulse{0%,100%{transform:scale(1)}15%{transform:scale(1.13)}30%{transform:scale(1)}45%{transform:scale(1.08)}}
+.btn,.option{font:700 15px Vazirmatn,Tahoma,sans-serif;cursor:pointer;touch-action:manipulation;transition:transform .12s,filter .12s}
+.btn{border:2px solid #ffe0ed;border-radius:6px;padding:12px 19px;min-height:48px;color:#421b39;background:linear-gradient(180deg,#ffd8e9,#ff85bc);box-shadow:0 5px 0 #a43c71,0 8px 18px #ff66aa33}
+.btn:active,.option:active{transform:translateY(3px);filter:brightness(.95)}
+.btn.secondary{background:#ffffff12;color:#ffe8f3;border-color:#ffffff3b;box-shadow:0 4px 0 #100819}
+.soundbar{display:flex;justify-content:center;gap:9px;margin:0 0 15px;flex-wrap:wrap}
+.soundbtn{font:600 12px Vazirmatn,sans-serif;color:#ffe4f0;background:#ffffff12;border:1px solid #ffb3d355;border-radius:5px;padding:7px 11px;cursor:pointer}
+.soundbtn.on{background:#ff80b733;border-color:#ffabd1}
+.envelope-area{height:185px;display:grid;place-items:center;perspective:700px;margin:8px 0}
+.envelope{position:relative;width:190px;height:125px;background:#f59ac2;border-radius:4px;box-shadow:0 9px 0 #a84d78,0 15px 25px #09020b66;cursor:pointer}
+.envelope:before{content:"";position:absolute;bottom:0;left:0;width:0;height:0;border-left:95px solid transparent;border-right:95px solid transparent;border-top:63px solid #ffd1e4;z-index:2}
+.envelope:after{content:"";position:absolute;bottom:0;right:0;width:0;height:0;border-left:95px solid transparent;border-right:95px solid transparent;border-bottom:63px solid #ee83b1;z-index:2}
+.flap{position:absolute;top:0;left:0;width:0;height:0;border-left:95px solid transparent;border-right:95px solid transparent;border-top:78px solid #ffcee2;transform-origin:top;transition:transform .65s;z-index:3}
+.letter{position:absolute;left:12px;right:12px;bottom:8px;height:100px;background:#fff8fb;color:#7c3158;border:1px dashed #e78bb5;display:grid;place-items:center;font-size:13px;font-weight:800;transition:transform .7s .2s;z-index:1}
+.envelope.open .flap{transform:rotateX(180deg);z-index:0}.envelope.open .letter{transform:translateY(-78px)}
+.hint{font-size:12px;color:#ffc4dc;margin:3px 0 14px}
+.options{display:grid;gap:11px;margin-top:20px}
+.option{width:100%;padding:14px;border:1px solid #ffadd355;border-radius:5px;background:#ffffff10;color:#fff0f7}
+.option:active{background:#ff79b433}
+.feedback{min-height:48px;color:#ffc0da;font-weight:700;margin-top:14px;line-height:1.9}
+.progress{height:7px;background:#ffffff1a;border:1px solid #ffffff22;overflow:hidden;margin:0 auto 19px;max-width:210px}
+.progress span{display:block;height:100%;background:repeating-linear-gradient(90deg,#ff8dbd 0 9px,#ffd9e9 9px 13px);transition:width .4s}
+.final-heart{font-size:65px;display:block;animation:pulse 1.2s infinite;margin:0 0 7px}
+.final-message{color:#ffb9d8;font-size:27px!important;line-height:1.9!important;margin:13px 0!important}
+.small{font-size:11px;color:#dcb8ca;margin-top:20px}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div id="pixelRain" aria-hidden="true"></div>
+<main>
+<section class="screen active" id="welcome">
+ <div class="eyebrow">✦ یک بازی پیکسلی، فقط برای تو ✦</div>
+ <div class="soundbar">
+  <button class="soundbtn" id="musicBtn" onclick="toggleMusic()">♫ موسیقی: خاموش</button>
+  <button class="soundbtn on" id="fxBtn" onclick="toggleFx()">♪ افکت‌ها: روشن</button>
+ </div>
+ <div class="panel">
+  <div class="heart-wrap"><button class="big-heart" aria-label="باز کردن قلب" onclick="playTone('heart');show('envelope')">♥</button></div>
+  <h1>خوش اومدی قلب بابایی</h1>
+  <p>مهدیه خانوم، یه سورپرایز کوچولو منتظرته…</p>
+  <button class="btn" onclick="playTone('click');show('envelope')">شروع سورپرایز <span>💗</span></button>
+ </div>
+ <div class="small">ساخته شده با کلی عشق · از طرف کمیل</div>
+</section>
+
+<section class="screen" id="envelope">
+ <div class="eyebrow">مرحله‌ی اول · نامه‌ی مخفی 💌</div>
+ <div class="panel">
+  <h1>یه پاکت نامه داری!</h1><p>روی پاکت بزن تا نامه‌ات باز بشه.</p>
+  <div class="envelope-area"><div class="envelope" id="env" role="button" tabindex="0" aria-label="باز کردن نامه" onclick="openLetter()"><div class="flap"></div><div class="letter">برای مهدیه‌ی عزیزم 💌</div></div></div>
+  <div class="hint" id="hint">برای باز کردن، روی پاکت ضربه بزن</div>
+  <button class="btn" id="letterNext" style="display:none" onclick="playTone('click');show('q1')">بریم ببینیم توی نامه چیه ✨</button>
+ </div>
+</section>
+
+<section class="screen" id="q1">
+ <div class="eyebrow">مرحله‌ی دوم · سؤال شماره ۱</div><div class="progress"><span style="width:50%"></span></div>
+ <div class="panel">
+  <h1>دختر من کیه؟ 🥰</h1><p>ببینم جواب این یکی رو بلدی؟</p>
+  <div class="options">
+   <button class="option" onclick="answer(1)">مهدیه ذوالفقاری 💗</button>
+   <button class="option" onclick="answer(1)">مهدیه</button>
+  </div><div class="feedback" id="f1"></div>
+ </div>
+</section>
+
+<section class="screen" id="q2">
+ <div class="eyebrow">مرحله‌ی سوم · سؤال شماره ۲</div><div class="progress"><span style="width:100%"></span></div>
+ <div class="panel">
+  <h1>عسل من کیهه؟ 🍯</h1><p>این یکی دیگه خیلی آسونه!</p>
+  <div class="options">
+   <button class="option" onclick="answer(2)">من 🙋🏻‍♀️</button>
+   <button class="option" onclick="answer(2)">مهدیه 💕</button>
+  </div><div class="feedback" id="f2"></div>
+ </div>
+</section>
+
+<section class="screen" id="ending">
+ <div class="eyebrow">مرحله‌ی آخر · سورپرایز نهایی ✦</div>
+ <div class="panel">
+  <span class="final-heart">💖</span>
+  <h1>آفرین دختر باهوش من!</h1>
+  <p>همه‌ی سؤال‌ها رو درست جواب دادی…<br>حالا جایزه‌ات:</p>
+  <h1 class="final-message">کمیل خیلی دوست داره مهدیه خانوم ❤️</h1>
+  <p>همیشه بخند، قشنگ‌ترین اتفاق من.</p>
+  <button class="btn secondary" onclick="playTone('click');show('welcome')">دوباره بازی کنیم؟ ↻</button>
+ </div>
+</section>
+</main>
+<script>
+let fxOn=true,musicOn=false,ctx=null,musicTimer=null,musicStep=0;
+function audio(){if(!ctx){const A=window.AudioContext||window.webkitAudioContext;if(A)ctx=new A()}if(ctx&&ctx.state==='suspended')ctx.resume();return ctx}
+function playTone(kind='click'){
+ if(!fxOn)return;const c=audio();if(!c)return;
+ const notes=kind==='heart'?[523.25,659.25,783.99]:kind==='correct'?[659.25,783.99,987.77]:[587.33,783.99];
+ notes.forEach((n,i)=>{const o=c.createOscillator(),g=c.createGain();o.type='sine';o.frequency.value=n;g.gain.setValueAtTime(.0001,c.currentTime+i*.09);g.gain.exponentialRampToValueAtTime(.11,c.currentTime+i*.09+.025);g.gain.exponentialRampToValueAtTime(.0001,c.currentTime+i*.09+.22);o.connect(g);g.connect(c.destination);o.start(c.currentTime+i*.09);o.stop(c.currentTime+i*.09+.24)});
+}
+function toggleFx(){fxOn=!fxOn;const b=document.getElementById('fxBtn');b.textContent='♪ افکت‌ها: '+(fxOn?'روشن':'خاموش');b.classList.toggle('on',fxOn);if(fxOn)playTone('click')}
+function toggleMusic(){
+ const b=document.getElementById('musicBtn');
+ if(musicOn){clearInterval(musicTimer);musicOn=false;b.textContent='♫ موسیقی: خاموش';b.classList.remove('on');return}
+ const c=audio();if(!c)return;musicOn=true;b.textContent='♫ موسیقی: روشن';b.classList.add('on');
+ // A tiny original, gentle arpeggio composed with Web Audio; no external track.
+ const melody=[392,493.88,587.33,493.88,440,523.25,659.25,523.25];
+ musicTimer=setInterval(()=>{if(!musicOn)return;const osc=c.createOscillator(),gain=c.createGain();osc.type='triangle';osc.frequency.value=melody[musicStep++%melody.length];gain.gain.setValueAtTime(.0001,c.currentTime);gain.gain.exponentialRampToValueAtTime(.035,c.currentTime+.04);gain.gain.exponentialRampToValueAtTime(.0001,c.currentTime+.48);osc.connect(gain);gain.connect(c.destination);osc.start();osc.stop(c.currentTime+.5)},480);
+}
+function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
+function openLetter(){document.getElementById('env').classList.add('open');document.getElementById('hint').textContent='نامه‌ات باز شد! 💌';document.getElementById('letterNext').style.display='inline-block';playTone('heart')}
+document.getElementById('env').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openLetter()}});
+function answer(q){playTone('correct');if(q===1){document.getElementById('f1').textContent='آفرین! معلومه که خودتی، مهدیه‌ی قشنگم 😍';setTimeout(()=>show('q2'),1150)}else{document.getElementById('f2').textContent='درسته! عسل بابایی خودِ خودِ تویی 🍯💗';setTimeout(()=>show('ending'),1300)}}
+const symbols=['♥','♡','✦','✧'];function rain(){const el=document.createElement('span');el.className='pixel';el.textContent=symbols[Math.floor(Math.random()*symbols.length)];el.style.left=Math.random()*100+'vw';el.style.animationDuration=(7+Math.random()*7)+'s';el.style.fontSize=(13+Math.random()*17)+'px';document.getElementById('pixelRain').appendChild(el);setTimeout(()=>el.remove(),15000)}
+for(let i=0;i<15;i++)setTimeout(rain,i*350);setInterval(rain,900);
+</script>
+</body>
+</html>
